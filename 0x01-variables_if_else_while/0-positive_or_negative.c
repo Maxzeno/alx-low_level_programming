@@ -1,8 +1,15 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
+#include <stdio.h>
 
 /* betty style doc for function main goes there */
+
+/**
+ * main - Entry point
+ * Description: checks if n is positive, zero or negative
+ * Return: Always 0 (success)
+ */
 int main(void)
 {
 	int n;
@@ -23,5 +30,6 @@ int main(void)
 	{
 		printf("%d is zero\n", n);
 	}
+	
 	return (0);
 }

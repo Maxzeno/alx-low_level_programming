@@ -1,6 +1,11 @@
 #include <stdio.h>
 
-int main()
+/**
+ * main - Entry point
+ * Description: prints the alphabet in lowercase
+ * Return: Always 0 (success)
+ */
+int main(void)
 {
 	char ch;
 	int i;
