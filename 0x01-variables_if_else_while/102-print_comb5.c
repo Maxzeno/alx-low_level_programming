@@ -8,7 +8,9 @@
 int main(void)
 {
 	int n1, n2, m1, m2;
-	m1, m2 = 0;
+	
+	m1 = 0;
+	m2 = 0;
 
 	for (n1 = 0; n1 < 10; n1++)
 	{
