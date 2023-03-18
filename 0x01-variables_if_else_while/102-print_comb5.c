@@ -7,44 +7,24 @@
  */
 int main(void)
 {
-	int n1, n2, m1, m2;
-	
-	m1 = 0;
-	m2 = 0;
+	int n1, n2;
 
-	for (n1 = 0; n1 < 10; n1++)
+	for (n1 = 0; n1 < 100; n1++)
 	{
-		for (n2 = 0; n2 < 10; n2++)
+		for (n2 = n1 + 1; n2 < 100; n2++)
 		{
-			if (n2 == 9)
-			{
-				m1++;
-				m2 = 0;
-			}
-			else
-			{
-				m2++;
-			}
+			putchar((n1 / 10) + '0');
+			putchar((n1 % 10) + '0');
+			putchar(' ');
+			putchar((n2 / 10) + '0');
+			putchar((n2 % 10) + '0');
 
-			while (m1 < 10)
+			if (n1 != 98 || n1 != 99)
 			{
-				while (m2 < 10)
-				{
-					putchar(n1 + '0');
-					putchar(n2 + '0');
-					putchar(' ');
-					putchar(m1 + '0');
-					putchar(m2 + '0');
-
-					if (n1 != 9 || n2 != 8 || m1 != 9 || m2 != 9)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					m2++;
-				}
-				m1++;
+				putchar(',');
+				putchar(' ');
 			}
+					
 		}
 	}
 	putchar('\n');
