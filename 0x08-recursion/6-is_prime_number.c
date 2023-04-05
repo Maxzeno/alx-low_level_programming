@@ -11,7 +11,7 @@ int is_prime_number_wrapper(int i, int n)
 
 	if (n < 0)
 	{
-		n = n * -1;
+		return (0);
 	}
 
 	half = (n / 2);
