@@ -12,7 +12,7 @@ int _sqrt_recursion_wrapper(int guess, int n)
 	if (guess*guess != n)
 	{
 		if (guess*guess < n)
-			_sqrt_recursion_wrapper(guess+1, n);
+			return _sqrt_recursion_wrapper(guess+1, n);
 		else
 			return -1;
 	}
