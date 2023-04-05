@@ -8,13 +8,13 @@
 int is_prime_number_wrapper(int i, int n)
 {
 	int half;
-	
+
 	if (n < 0)
 	{
 		n = n * -1;
 	}
 
-	half = (n / 2) + 1;
+	half = (n / 2);
 
 	if (n == 1)
 	{
@@ -22,17 +22,17 @@ int is_prime_number_wrapper(int i, int n)
 	}
 	else if (n == 2)
 	{
-		return (0);
+		return (1);
 	}
 
 	if (i >= half)
 	{
-		return (0);
+		return (1);
 	}
 
 	if (n % i == 0)
 	{
-		return (1);
+		return (0);
 	}
 	else
 	{
