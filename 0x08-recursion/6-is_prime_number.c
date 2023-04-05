@@ -7,11 +7,12 @@
 */
 int is_prime_number_wrapper(int i, int n)
 {
+	int half;
+	
 	if (n < 0)
 	{
 		n = n * -1;
 	}
-	int half;
 
 	half = (n / 2) + 1;
 
