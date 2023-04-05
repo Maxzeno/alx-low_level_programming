@@ -1,24 +1,23 @@
 /**
  * _sqrt_recursion_wrapper - a wrapper that does the recursion bit
  *
+ * @guess: increments by one
  * @n : input number
- * @min: minimum number to guess
- * @max: maximum number to guess
  *
  * Return: square root of @n or -1
 */
 int _sqrt_recursion_wrapper(int guess, int n)
-{	
-	if (guess*guess != n)
+{
+	if (guess * guess != n)		/*pow(guess, 2) != n*/
 	{
-		if (guess*guess < n)
-			return _sqrt_recursion_wrapper(guess+1, n);
+		if (guess * guess < n)
+			return (_sqrt_recursion_wrapper(guess + 1, n));
 		else
-			return -1;
+			return (-1);
 	}
 	else
 	{
-		return guess;
+		return (guess);
 	}
 }
 
