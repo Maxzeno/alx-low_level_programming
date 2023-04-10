@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
 {
 	int i, num, sum;
 
+	sum = 0;
+
 	for(i=1; i < argc; i++)
 	{
 		num = atoi(argv[i]);
@@ -22,8 +24,8 @@ int main(int argc, char *argv[])
 		}
 		else if (num == 0)
 		{
-			print('Error');
-			return (1)
+			printf("Error");
+			return (1);
 		}
 	}
 	
