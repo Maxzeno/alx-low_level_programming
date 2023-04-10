@@ -2,18 +2,19 @@
 #include <stdio.h>
 
 /**
- *main - prints all args
- *@argc: length of argv.
- *@argv: pointer to string.
+ * main - a program that prints all arguments it receives
  *
- *Return: 0.
- */
+ * @argc: holds the number of arguments passed
+ * @argv: array pointer that holds the arguments passed
+ *
+ * Return: Always 0 (Success)
+*/
 
 int main(int argc, char *argv[])
 {
-	while(argc--)
-	{
-		printf("%s\n", *argv++);
-	}
+	int i;
+
+	for (i = 0; i < argc; i++)
+		printf("%s\n", argv[i]);
 	return (0);
 }
