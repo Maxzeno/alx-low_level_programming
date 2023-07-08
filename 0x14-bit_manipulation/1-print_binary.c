@@ -1,20 +1,4 @@
 #include "main.h"
-/**
- * getPower - returns the base and power calc
- * @base: base
- * @power: power
- * Return: value of base and power
- */
-unsigned long int getPower(unsigned int base, unsigned int power)
-{
-    unsigned long int number;
-    unsigned int i;
-
-    number = 1;
-    for (i = 1; i <= power; i++)
-        number *= base;
-    return (number);
-}
 
 /**
  * print_binary - returns the binary of a number
@@ -31,7 +15,7 @@ void print_binary(unsigned long int n)
     base = 2;
     power = sizeof(unsigned long int) * 8 - 1;
     track = 1;
-    
+
     for (i = 1; i <= power; i++)
         track *= base;
 
