@@ -15,7 +15,6 @@ void print_binary(unsigned long int n)
     base = 2;
     power = sizeof(unsigned long int) * 8 - 1;
     track = 1;
-
     for (i = 1; i <= power; i++)
         track *= base;
 
