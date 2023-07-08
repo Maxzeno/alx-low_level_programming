@@ -19,7 +19,6 @@ void print_binary(unsigned long int n)
     for (i = 1; i <= power; i++)
         track *= base;
 
-
     while (track != 0)
     {
         result = n & track;
@@ -27,7 +26,6 @@ void print_binary(unsigned long int n)
         {
             remain = 1;
             _putchar('1');
-
         }
         else if (remain == 1 || track == 1)
         {
