@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _power - calculate (base and power)
- * @base: base of the exponet
- * @power: power of the exponet
+ * getPower - returns the base and power calc
+ * @base: base
+ * @power: power
  * Return: value of base and power
  */
-unsigned long int _powerFunc(unsigned int base, unsigned int power)
+unsigned long int getPower(unsigned int base, unsigned int power)
 {
     unsigned long int number;
     unsigned int i;
@@ -16,28 +16,28 @@ unsigned long int _powerFunc(unsigned int base, unsigned int power)
     return (number);
 }
 /**
- * print_binary - prints the binary representation of a number
- * @n: num of prented
- * Return: void
+ * print_binary - returns the binary of a number
+ * @n: number
+ * Return: nothing
  */
 void print_binary(unsigned long int n)
 {
     unsigned long int track, result;
-    char flag;
+    char remain;
 
-    flag = 0;
-    track = _power(2, sizeof(unsigned long int) * 8 - 1);
+    remain = 0;
+    track = getPower(2, sizeof(unsigned long int) * 8 - 1);
 
     while (track != 0)
     {
         result = n & track;
         if (result == track)
         {
-            flag = 1;
+            remain = 1;
             _putchar('1');
 
         }
-        else if (flag == 1 || track == 1)
+        else if (remain == 1 || track == 1)
         {
             _putchar('0');
         }
