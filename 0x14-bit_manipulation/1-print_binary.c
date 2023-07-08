@@ -15,6 +15,7 @@ unsigned long int getPower(unsigned int base, unsigned int power)
         number *= base;
     return (number);
 }
+
 /**
  * print_binary - returns the binary of a number
  * @n: number
