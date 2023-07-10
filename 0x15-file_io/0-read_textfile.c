@@ -10,28 +10,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buffMemory;
-	ssize_t openFile, readFile, writeFile;
+	char *buff;
+	ssize_t openfile, readfile, writefile;
 
 	if (filename == NULL)
 		return (0);
 
-	buffMemory = malloc(sizeof(char) * letters);
-	if (buffMemory == NULL)
+	buff = malloc(sizeof(char) * letters);
+	if (buff == NULL)
 		return (0);
 
-	openFile = open(filename, O_RDONLY);
-	readFile = read(openFile, buffMemory, letters);
-	writeFile = write(STDOUT_FILENO, buffMemory, readFile);
+	openfile = open(filename, O_RDONLY);
+	readfile = read(openfile, buff, letters);
+	writefile = write(STDOUT_FILENO, buff, readfile);
 
-	if (openFile == -1 || readFile == -1 || writeFile == -1 || writeFile != readFile)
+	if (openfile == -1 || readfile == -1 || writefile == -1 || writefile != readfile)
 	{
-		free(buffMemory);
+		free(buff);
 		return (0);
 	}
 
-	free(buffMemory);
-	close(openFile);
+	free(buff);
+	close(openfile);
 
-	return (writeFile);
+	return (writefile);
 }
