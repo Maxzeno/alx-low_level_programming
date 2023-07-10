@@ -13,9 +13,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffMemory;
 	ssize_t openFile, readFile, writeFile;
 
-	buffMemory = malloc(sizeof(char) * letters);
+	if (filename == NULL)
+		return (0);
 
-	if (filename == NULL || buffMemory == NULL)
+	buffMemory = malloc(sizeof(char) * letters);
+	if (buffMemory == NULL)
 		return (0);
 
 	openFile = open(filename, O_RDONLY);
