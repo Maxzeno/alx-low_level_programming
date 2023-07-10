@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - Reads text file
- * @filename: Name of file.
- * @letters: Number of letters to read.
+ * read_textfile - Reads text file.
+ * @filename: Name of file
+ * @letters: Number of letters to read
  *
- * Return: Returns the file text.
+ * Return: Returns the file text
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
