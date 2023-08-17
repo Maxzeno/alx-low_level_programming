@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * print_dlistint - Prints all of the items in the dlistint_t list.
